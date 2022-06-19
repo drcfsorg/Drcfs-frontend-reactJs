@@ -1,0 +1,69 @@
+.box{
+    min-height: 30vh;
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.community-box{
+    height:80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.span{
+    color: rgba(128, 128, 128 ,1);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding-left: 1%;
+}
+
+.community{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    padding-left: 1%;
+    box-sizing: border-box;
+    padding-right: 1%;
+}
+
+.logoBox{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logoBox .img{
+    height: 12vh;
+    width:45%;
+    object-fit:fill;
+}
+
+
+.logoSpan{
+    font-size: 1.4rem;
+    color: rgba(128, 128, 128 ,1);
+    font-weight: bold;
+}
+
+.nameBox{
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    color: rgba(128, 128, 128 ,1);
+    font-weight: bold;
+}
+

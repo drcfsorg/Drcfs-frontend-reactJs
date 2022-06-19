@@ -1,0 +1,25 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color:#1b1b1b;
+}
+
+::-webkit-scrollbar-thumb{
+  background: grey;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#31343c;
+}
+
+.app{
+  font-family: 'Manrope', sans-serif;
+}

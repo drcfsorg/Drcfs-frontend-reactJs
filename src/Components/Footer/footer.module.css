@@ -1,0 +1,9 @@
+:root{
+    --footer-color:#121418;
+}
+
+.footer{
+    background-color: var(--footer-color);
+    height: 60vh;
+    width: 100%;
+}

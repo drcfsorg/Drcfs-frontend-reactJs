@@ -1,5 +1,5 @@
 import classes from "./events.module.css";
-import {MdKeyboardArrowRight} from "react-icons/md";
+import {MdArrowForwardIos} from "react-icons/md";
 
 const caption = "Join our DRCFS community to upskill your data science and machine learning skills from industry experts."
 
@@ -31,7 +31,7 @@ function Events() {
                        </div>
                 <button className={classes.button}>
                 <span>Explore More Events</span>
-                <MdKeyboardArrowRight className={classes.arrowIcon}/></button>
+                <MdArrowForwardIos className={classes.arrowIcon}/></button>
             </div>
         </div>
     )

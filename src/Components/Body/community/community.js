@@ -2,16 +2,6 @@ import classes from "./community.module.css";
 import communityLogos from "./comunityImages";
 
 
-const communityNames=[
-    "Howard University",
-    "GoldenGate College",
-    "Microsoft",
-    "Tribhuvan University",
-    "DePauw University",
-    "Many More+"
-
-]
-
 const Community=()=>{
     return(
         <div className={classes.box}>
@@ -21,7 +11,7 @@ const Community=()=>{
             {
                 communityLogos.map((item)=>{
                     return(
-                        <div className={classes.logoBox}>
+                        <div className={classes.logoBox} key={item.name}>
                             <img className={classes.img} src={item.imageUrl} alt={item.name} />
                             <div className={classes.nameBox}><p>{item.name}</p></div>
                         </div>

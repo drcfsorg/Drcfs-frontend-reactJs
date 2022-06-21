@@ -204,7 +204,7 @@
 @media (max-width:481px) {
     .event-box{
         margin-top: 5%;
-        width: 80%;
+        width: 90%;
         /* this has to be removed in the production*/
         color: var(---font-color);
     }

@@ -82,7 +82,9 @@ function Events() {
                                                             <IoCalendarSharp/>
                                                             <p>{event.date}</p>
                                                         </div>
+                                                        <div className={classes.shareIconBox}>
                                                         <BsShare className={classes.shareIcon}/>
+                                                        </div>
                                                     </div>
                                             </div>
                                         </div>

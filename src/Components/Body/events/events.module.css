@@ -191,14 +191,19 @@
     padding-left: 5%;
 }
 
-.shareIcon{
-    padding-right: 4%;
+.shareIconBox{
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    margin-right: 4%;
 }
 
-
-.shareIcon:hover{
-    color:rgb(255, 77, 0); ;
+.shareIconBox:hover{
+    background-color: #494949;
 }
 
 @media (max-width:481px) {

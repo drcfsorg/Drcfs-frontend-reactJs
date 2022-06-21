@@ -29,10 +29,10 @@
 }
 
 .iconBox{
-    height: 8vh;
-    width: 20%;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     background-color: #25262a;
     border-radius: 50%;
     display: flex;
@@ -43,4 +43,14 @@
 
 .iconBox:hover{
     background-color: #3a3d47;
+}
+
+@media (max-width:481px) {
+        .container{
+            width: 90%;
+            padding-top: 5%;
+            border-top: 2px solid white;
+            margin-bottom: 5%;
+            box-sizing: border-box;
+        }
 }

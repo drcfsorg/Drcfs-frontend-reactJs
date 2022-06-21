@@ -31,3 +31,9 @@
     font-size: 1.1rem;
     color: white;
 }
+
+@media (max-width:481px){
+    .descBox{
+        width: 90%;
+    }
+}

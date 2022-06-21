@@ -24,3 +24,14 @@
 .list-div p:hover{
    color: rgb(193, 74, 0);
 }
+
+
+@media (max-width:481px) {
+    .container{
+        width: 90%;
+        padding-top: 5%;
+        border-top: 2px solid white;
+        margin-bottom: 5%;
+        box-sizing: border-box;
+    }
+}

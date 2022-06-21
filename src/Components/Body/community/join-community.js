@@ -5,7 +5,7 @@ const JoinCommunity = () => {
   return (
     <div className={classes.box}>
       <div className={classes["headline-box"]}>
-            <h1 className={classes.h1}>Join DRCFS Community!</h1>
+            <h1 className={classes.h1}>Join Drcfs Community</h1>
       </div>
       <div className={classes["button-Box"]}>
         <button className={classes["linkedin-button"]}>

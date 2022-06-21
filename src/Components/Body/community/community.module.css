@@ -1,10 +1,16 @@
+:root{
+    ---font-color:white;
+}
+
+
+
 .box{
-    min-height: 30vh;
+    min-height: 50vh;
     width: 100%;
     background-color: #1b1b1b;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
@@ -18,10 +24,12 @@
 }
 
 .span{
-    color: rgba(128, 128, 128 ,1);
-    font-size: 1.3rem;
+    color: var(---font-color);
+    font-size: 1.2rem;
     text-transform: uppercase;
     padding-left: 1%;
+    font-weight: bold;
+    margin-top: 5%;
 }
 
 .community{
@@ -30,7 +38,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2%;
+    margin-top: 4%;
     padding-left: 1%;
     box-sizing: border-box;
     padding-right: 1%;
@@ -49,21 +57,48 @@
 .logoBox .img{
     height: 12vh;
     width:45%;
-    object-fit:fill;
+    object-fit:contain;
 }
 
 
-.logoSpan{
-    font-size: 1.4rem;
-    color: rgba(128, 128, 128 ,1);
-    font-weight: bold;
-}
 
 .nameBox{
     width: 100%;
     height: max-content;
     text-align: center;
-    color: rgba(128, 128, 128 ,1);
+    color:var(---font-color);
     font-weight: bold;
+}
+
+@media (max-width:481px) {
+    .box{
+        min-height:max-content;
+    }
+
+    .community-box{
+        height: 100%;
+    }
+
+    .community{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .span{
+        text-align: center;
+    }
+
+    .logoBox{
+        width: 30%;
+        margin: 4%;
+    }
+
+    .logoBox .img{
+        width: 100%;
+        object-fit: fill;
+    }
+
+   
 }
 

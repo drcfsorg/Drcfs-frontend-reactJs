@@ -15,6 +15,7 @@
     --button-alignItems:center;
     --button-boxSizing:border-box;
     --button-mobile-fontSize:1.0rem;
+    --button-mobile-height:35%;
 }
 
 
@@ -100,4 +101,33 @@
 .discord-button:active{
     background-color: #324fe1;
     color: white;
+}
+
+@media (max-width:481px) {
+    .headline-box{
+        width: max-content;
+    }
+
+    .headline-box .h1{
+        font-size: 1.6rem;
+    }
+
+    .button-Box{
+        width: 100%;
+        padding-left: 2%;
+        padding-right: 2%;
+        box-sizing: border-box;
+    }
+
+    .linkedin-button{
+        font-size: var(--button-mobile-fontSize);
+        height: var(--button-mobile-height);
+    }
+
+    .discord-button{
+        font-size: var(--button-mobile-fontSize);
+        height: var(--button-mobile-height);
+    }
+
+    
 }

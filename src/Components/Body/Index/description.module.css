@@ -1,5 +1,5 @@
 :root{
-    --font-color:rgb(121, 118, 118);
+    ---font-color:white;
     --button-color:#31343c;
     --button-radius:30px;
     --button-border:none;
@@ -15,6 +15,7 @@
     --button-alignItems:center;
     --button-boxSizing:border-box;
     --button-mobile-fontSize:1.0rem;
+    --button-height-mobile:45%;
 }
 
 .descBox{
@@ -36,7 +37,7 @@
 
 .descBox .h1{
     font-size: 2.6rem;    
-    color: var(--font-color);
+    color: var(---font-color);
 }
 
 .descBox .span{
@@ -46,7 +47,7 @@
 .descBox .p{
     padding-top: 6%;
     font-size: 1.5rem;
-    color: var(--font-color);
+    color: var(---font-color);
 
 }
 
@@ -59,7 +60,7 @@
 }
 
 .linkedin-button{
-    color: var(--font-color);
+    color: var(---font-color);
     width: var(--button-width);
     height: var(--button-height);
     border-radius: var(--button-radius);
@@ -86,7 +87,7 @@
 }
 
 .discord-button{
-    color: var(--font-color);
+    color: var(---font-color);
     width: var(--button-width);
     height: var(--button-height);
     border-radius: var(--button-radius);
@@ -134,4 +135,11 @@
         font-size: var(--button-mobile-fontSize);
     }
 
+    .linkedin-button{
+        height: var(--button-height-mobile);
+    }
+
+    .discord-button{
+        height: var(--button-height-mobile);
+    }
 }

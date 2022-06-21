@@ -4,10 +4,16 @@
 
 .footer{
     background-color: var(--footer-color);
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items:flex-start;
+}
+
+@media (max-width:481px){
+    .footer{
+        flex-wrap: wrap;
+    }
 }
 

@@ -6,7 +6,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const email = "example@gmail.org";
+const email = "johnysins6969@gmail.org";
 
 const contactIcons = [
   {

@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    
 }
 
 .box{
@@ -21,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .box-header{
@@ -68,14 +70,16 @@
     justify-content: center;
     flex-wrap:wrap;
     box-sizing: border-box;
+    color: var(---font-color);
 }
 
 .event-box{
-    height: 50vh;
+    min-height: 50vh;
     width: 30%;
     background-color:#1e1e1e;
     margin: 1%;
    border-radius: 16px;
+   padding: 0%;
 }
 
 .button{
@@ -103,9 +107,106 @@
     background-color:rgba(62, 61, 61, 0.388) ;
 }
 
+
+.imgBox{
+    height: 35vh;
+    width: 100%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.imgBox .img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.caption-Box{
+    height: max-content;
+    width: 100%;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.eventName-Box{
+    height: 5vh;
+    width: 100%;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+.eventName-Box .span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.eventName-BoxSpeaker{
+    height: 70%;
+    width: 100%;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.speakerBox{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    box-sizing: border-box;
+    margin-top: 2.5%;
+
+}
+.speakerBox p{
+    padding-left: 2%;
+    font-weight: 400;
+}
+
+.dateBox{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.date-Calendar{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+
+.date-Calendar p{
+    padding-left: 5%;
+}
+
+.shareIcon{
+    padding-right: 4%;
+    cursor: pointer;
+}
+
+
+.shareIcon:hover{
+    color:rgb(255, 77, 0); ;
+}
+
 @media (max-width:481px) {
     .event-box{
+        margin-top: 5%;
         width: 80%;
+        /* this has to be removed in the production*/
+        color: var(---font-color);
     }
 
     .button{

@@ -56,8 +56,8 @@
 
 .logoBox .img{
     height: 12vh;
-    width:45%;
-    object-fit:contain;
+    width:55%;
+    object-fit:fill;
 }
 
 

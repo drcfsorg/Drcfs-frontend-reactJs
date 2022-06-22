@@ -11,7 +11,7 @@ const Community=()=>{
             {
                 communityLogos.map((item)=>{
                     return(
-                        <div className={classes.logoBox} key={item.name}>
+                        <div className={classes.logoBox} key={item.id}>
                             <img className={classes.img} src={item.imageUrl} alt={item.name} />
                             <div className={classes.nameBox}><p>{item.name}</p></div>
                         </div>

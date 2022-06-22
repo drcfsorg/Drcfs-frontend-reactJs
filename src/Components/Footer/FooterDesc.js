@@ -2,7 +2,7 @@ import classes from "./FooterDesc.module.css";
 
 
 //Make the description small as far as possible
-const description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+const description="Data Research Council for Students is a nonprofit organization that aims to provide quality data literacy to every part of the world."
 
 
 const FooterDescription=()=>{

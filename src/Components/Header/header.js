@@ -1,8 +1,32 @@
 import classes from "./header.module.css";
 import drcfsIcon from "../../Assets/DRC4S.png";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-const headers = ["Community", "Clubs", "Events", "About"];
+// , "Events", "About", "DatSets"
+
+const headers = [
+  {
+    id:1,
+    headerName:"Community",
+    path:"/community"
+  },
+  {
+    id:2,
+    headerName:"Events",
+    path:"/events"
+  },
+  {
+    id:3,
+    headerName:"About",
+    path:"/about"
+  },
+  {
+    id:4,
+    headerName:"DataSets",
+    path:"/datasets"
+  }
+];
 
 const Header = () => {
   const [clicked, setIsClicked] = useState(false);
@@ -35,8 +59,8 @@ const Header = () => {
         <ul className={classes.ulList}>
           {headers.map((header) => {
             return (
-              <div className={classes.liBox} key={header}>
-                <li>{header}</li>
+              <div className={classes.liBox} key={header.id}>
+                <NavLink to={header.path}><li>{header.headerName}</li></NavLink>
                 <div className={classes.underLine}></div>
               </div>
             );

@@ -1,22 +1,36 @@
-import './App.css';
-import Header from './Components/Header/header';
-import Index from './Components/Body/Index';
-import Community from './Components/Body/community/community';
-import Events from './Components/Body/events/events';
-import Footer from './Components/Footer/footer';
+import "./App.css";
 
-//this is just for the experiment purpose
-import JoinCommunity from './Components/Body/community/join-community';
+//Header and Footer Import
+import Header from "./Components/Header/header";
+import Footer from "./Components/Footer/footer";
+
+//Since all the pages would have header and Footer,these two components must not not used inside of Routes element
+
+//Pages import
+
+import HomePage from "./Pages/home";
+import Community from "./Pages/community";
+import Event from "./Pages/event";
+import About from "./Pages/about";
+import DataSet from "./Pages/datasets";
+
+//
+
+import { Routes, Route, Navigate } from "react-router";
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <Index/>
-        <Community/>
-        <Events/>
-        <JoinCommunity/>
-        <Footer/>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/events" element={<Event />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/datasets" element={<DataSet />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

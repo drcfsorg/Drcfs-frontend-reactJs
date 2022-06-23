@@ -60,7 +60,7 @@ const Header = () => {
           {headers.map((header) => {
             return (
               <div className={classes.liBox} key={header.id}>
-                <NavLink to={header.path}><li>{header.headerName}</li></NavLink>
+                <NavLink to={header.path} className={classes.navLink}><li>{header.headerName}</li></NavLink>
                 <div className={classes.underLine}></div>
               </div>
             );

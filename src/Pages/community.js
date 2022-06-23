@@ -1,8 +1,8 @@
 import React from "react";
-
+import CommunityPage from "../Components/CommunityPage/Communitypage";
 const Community=()=>{
     return <React.Fragment>
-        <h1>This is Community Page</h1>
+        <CommunityPage/>
     </React.Fragment>
 }
 

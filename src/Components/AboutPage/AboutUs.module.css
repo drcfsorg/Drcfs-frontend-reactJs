@@ -1,0 +1,35 @@
+.container{
+    min-height: 60vh;
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerBox{
+    margin-top: 20vh;
+    height:max-content;
+    width: 90%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.headerBox h1{
+    font-family: 'Pacifico', cursive;
+}
+
+.headerBox span{
+    color: royalblue;
+}
+
+.headerBox p{
+    font-weight: 400;
+    font-size: 1.2rem;
+}

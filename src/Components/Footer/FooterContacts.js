@@ -9,19 +9,23 @@ import {
 const email = "johnysins6969@gmail.org";
 
 const contactIcons = [
-  {
+  { 
+    id:1,
     icon: FaDiscord,
     name: "discord",
   },
   {
+    id:2,
     icon: FaLinkedinIn,
     name: "discord",
   },
-  {
+  { 
+    id:3,
     icon: FaFacebookF,
     name: "discord",
   },
   {
+    id:4,
     icon: FaInstagram,
     name: "discord",
   },
@@ -39,7 +43,7 @@ const FooterContacts = () => {
       <div className={classes.contactBox}>
         {
             contactIcons.map((icon)=>{
-                return <div className={classes.iconBox} key={icon.name}>
+                return <div className={classes.iconBox} key={icon.id}>
                     {<icon.icon/>}
                 </div>
             })

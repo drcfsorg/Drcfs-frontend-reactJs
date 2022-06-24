@@ -25,6 +25,11 @@
    color: rgb(193, 74, 0);
 }
 
+.navLink{
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width:481px){
     .container{
         width: 90%;

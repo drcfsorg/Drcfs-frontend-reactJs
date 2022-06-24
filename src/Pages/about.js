@@ -1,9 +1,12 @@
 import React from "react";
+import AboutContent from "../Components/AboutPage/AboutContent";
+import AboutUs from "../Components/AboutPage/AboutUs";
 
 const About=()=>{
     return(
         <React.Fragment>
-            <h1>This is About Page</h1>
+            <AboutUs/>
+            <AboutContent/>
         </React.Fragment>
     )
 }

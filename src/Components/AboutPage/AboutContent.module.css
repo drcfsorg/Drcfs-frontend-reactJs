@@ -1,0 +1,105 @@
+.container{
+    width: 100%;
+    min-height: 80vh;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerBox{
+    width: 80%;
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.headerBox span{
+    color: royalblue;
+}
+
+.insideBox{
+   min-height: 40vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.member-Box{
+    min-height: 50vh;
+    width: 35%;
+    background-color: #31343c;
+    margin: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.img{
+    height: 40vh;
+    width: 90%;
+    object-fit: cover;
+    margin-top: 2vh;
+
+}
+
+.teamheaderBox{
+    margin-top: 2vh;
+    height: max-content;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roleBox{
+    width: 100%;
+    font-size: 1.1rem;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+    flex-direction: column;
+}
+
+.socialMediaBox{
+    margin-top: 4vh;
+    height: 10vh;
+    width: 80%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+.iconBox{
+    height: max-content;
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    transition: all 300ms ease-in-out;
+    border-radius: 50px;
+    color:royalblue ;
+}
+
+
+.iconBox:hover{
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+

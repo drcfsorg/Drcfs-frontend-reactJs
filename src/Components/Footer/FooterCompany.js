@@ -1,13 +1,32 @@
+import { NavLink } from "react-router-dom";
 import classes from "./FooterCompany.module.css";
 
 
 const navList=[
-    "About",
-    "Privacy Policy",
-    "Terms & Conditions"
+    {
+        id:1,
+        name:"About",
+        path:"/about"
+    },
+    {
+        id:2,
+        name:"Privacy Policy",
+        path:"/about"
+    },
+    {
+        id:3,
+        name:"Terms & Conditions",
+        path:"/about"
+    }
+    
+    
 ]
 
 const FooterCompany=()=>{
+    const onClickHandler=()=>{
+        window.scrollTo(0,0);
+    }
+
     return(
         <div className={classes.container}>
                 <div>
@@ -16,8 +35,8 @@ const FooterCompany=()=>{
                 <div className={classes.list}>
                 {
                     navList.map((item)=>{
-                       return  <div key={item} className={classes["list-div"]}>
-                            <p>{item}</p>
+                       return  <div key={item.id} className={classes["list-div"]}>
+                                <NavLink className={classes.navLink} to={item.path} onClick={onClickHandler}><p>{item.name}</p></NavLink>
                         </div>
                     })
                 }

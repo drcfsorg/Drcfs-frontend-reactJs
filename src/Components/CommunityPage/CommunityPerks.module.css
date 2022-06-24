@@ -9,6 +9,7 @@
 }
 
 .header-Box{
+    margin-top: 10vh;
     width: max-content;
     height: 20%;
     font-size: 1.3rem;
@@ -50,4 +51,8 @@
     background-color: royalblue;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.span{
+    color: orangered;
 }

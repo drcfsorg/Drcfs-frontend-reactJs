@@ -10,7 +10,7 @@ const CommunityDescription = () => {
       <div className={classes["join-Us-Box"]}>
         <div className={classes.headerBox}>
           <h1 className={classes.h1}>
-            Join Nepal's Largest Data Science Community
+            Join Nepal's Largest <span className={classes.span}>Data Science Community</span> 
           </h1>
         </div>
         <div className={classes.captionBox}>

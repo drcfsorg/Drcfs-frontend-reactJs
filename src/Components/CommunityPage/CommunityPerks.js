@@ -25,7 +25,7 @@ const CommunityPerks=()=>{
     return (
         <div className={classes.container}>
             <div className={classes["header-Box"]}>
-                <h1>Perks Of Joining DRCFS</h1>
+                <h1>Perks Of Joining <span className={classes.span}>DRCFS</span></h1>
             </div>
             <div className={classes["perksList-Box"]}>
                 {

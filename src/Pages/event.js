@@ -1,7 +1,9 @@
+import EventContent from "../Components/EventPage/EventContent";
+
 const Event=()=>{
     return(
         <div>
-            <h1>This is Event Page.</h1>
+            <EventContent/>
         </div>
     )
 }

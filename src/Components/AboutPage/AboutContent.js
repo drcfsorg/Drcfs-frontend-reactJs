@@ -20,15 +20,17 @@ const coreTeamData=[
         name:"Bishal Kharal",
         role:"Co-founder",
         github:"https://github.com/kbshal",
-        imageURL:"https://avatars.githubusercontent.com/u/49745633?v=4"
+        imageURL:"https://avatars.githubusercontent.com/u/49745633?v=4",
+        linkedin:"https://www.youtube.com/"
     },
     {
          
         id:2,
         name:"Prabesh Bista",
         role:"Developer",
-        github:"https://github.com/kbshal",
-        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4"
+        github:"https://github.com/PrabeshPP",
+        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4",
+        linkedin:"https://www.youtube.com/"
     
     },
     {
@@ -36,7 +38,8 @@ const coreTeamData=[
         name:"Bishal Kharal",
         role:"Co-founder",
         github:"https://github.com/kbshal",
-        imageURL:"https://avatars.githubusercontent.com/u/49745633?v=4"
+        imageURL:"https://avatars.githubusercontent.com/u/49745633?v=4",
+        linkedin:"https://www.youtube.com/"
     },
     {
          
@@ -44,7 +47,38 @@ const coreTeamData=[
         name:"Prabesh Bista",
         role:"Developer",
         github:"https://github.com/kbshal",
-        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4"
+        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4",
+        linkedin:"https://www.youtube.com/"
+    
+    },
+    {
+         
+        id:5,
+        name:"Prabesh Bista",
+        role:"Developer",
+        github:"https://github.com/kbshal",
+        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4",
+        linkedin:"https://www.youtube.com/"
+    
+    },
+    {
+         
+        id:6,
+        name:"Prabesh Bista",
+        role:"Developer",
+        github:"https://github.com/kbshal",
+        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4",
+        linkedin:"https://www.youtube.com/"
+    
+    },
+    {
+         
+        id:7,
+        name:"Prabesh Bista",
+        role:"Developer",
+        github:"https://github.com/kbshal",
+        imageURL:"https://avatars.githubusercontent.com/u/83439329?v=4",
+        linkedin:"https://www.youtube.com/"
     
     }
 ]
@@ -61,13 +95,8 @@ const AboutContent=()=>{
                                    <div className={classes.imgBox}>
                                     <img className={classes.img} src={item.imageURL} alt={item.name}/>
                                     <div className={classes.hoverBox}>
-                                        {
-                                            socialMediaIcons.map((item)=>{
-                                                return <div key={item.id} className={classes.iconBox}>
-                                              <item.icon/>
-                                                </div>
-                                            })
-                                        }
+                                      <a className={classes.iconBox} href={item.github} target="_blank"> <BsGithub /></a>
+                                       <a className={classes.iconBox} href={item.linkedin} target="_blank"><BsLinkedin /></a>
                                     
                                     </div>
                                    </div>

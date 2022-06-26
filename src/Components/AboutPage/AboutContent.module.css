@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 100%;
     min-height: 80vh;
     background-color: #141414;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.headerBox{
+.headerBox {
     width: 80%;
     height: 10vh;
     color: white;
@@ -17,12 +17,12 @@
     margin-top: 10vh;
 }
 
-.headerBox span{
+.headerBox span {
     color: royalblue;
 }
 
-.insideBox{
-   min-height: 40vh;
+.insideBox {
+    min-height: 40vh;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -30,76 +30,100 @@
     justify-content: center;
 }
 
-.member-Box{
+.member-Box {
     min-height: 50vh;
-    width: 35%;
-    background-color: #31343c;
+    width: 25%;
+    background-color: #444548;
     margin: 5%;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-.img{
+
+
+.imgBox {
     height: 40vh;
-    width: 90%;
-    object-fit: cover;
-    margin-top: 2vh;
-
+    width: 100%;
+    position: relative;
 }
 
-.teamheaderBox{
-    margin-top: 2vh;
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hoverBox {
+    display: none;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    transition: all 150ms ease-in-out;
+}
+
+.imgBox:hover .hoverBox {
+    display: flex;
+    background-color: rgba(29, 26, 24, 0.463);
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+
+
+.teamheaderBox {
     height: max-content;
     width: 100%;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.0rem;
+    font-weight: bold;
+
 }
 
-.roleBox{
+.roleBox {
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     color: white;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2vh;
     flex-direction: column;
+
 }
 
-.socialMediaBox{
-    margin-top: 4vh;
-    height: 10vh;
-    width: 80%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2vh;
-}
 
-.iconBox{
+
+.iconBox {
     height: max-content;
     width: max-content;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     transition: all 300ms ease-in-out;
     border-radius: 50px;
-    color:royalblue ;
+    color: royalblue;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 
-.iconBox:hover{
-    transform: scale(1.5);
-    z-index: 10;
+.iconBox:hover {
+    transform: scale(1.2);
 }
-
-

@@ -44,6 +44,13 @@ const Header = () => {
 
   const navClass=clicked?classes.nav1:classes.navList;
 
+
+  //To scroll to the top of the page
+  const onNavClick=()=>{
+    window.scrollTo(0,0);
+  }
+
+
   return (
       <nav className={classes.navBar}>
 
@@ -60,8 +67,12 @@ const Header = () => {
           {headers.map((header) => {
             return (
               <div className={classes.liBox} key={header.id}>
-                <NavLink to={header.path} className={classes.navLink}><li>{header.headerName}</li></NavLink>
+                <NavLink onClick={onNavClick} to={header.path} className={classes.navLink}>
+                
+                <li>{header.headerName}</li>
                 <div className={classes.underLine}></div>
+                </NavLink>
+                
               </div>
             );
           })}

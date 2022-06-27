@@ -1,6 +1,6 @@
 import classes from "./EventContent.module.css";
 import demoImg from "../../Assets/microsoft101.png";
-import {BsPersonFill,BsShare} from "react-icons/bs";
+import {BsPersonFill} from "react-icons/bs";
 import {IoCalendarSharp} from "react-icons/io5";
 
 
@@ -85,9 +85,9 @@ const EventContent=()=>{
                                                             <IoCalendarSharp/>
                                                             <p>{event.date}</p>
                                                         </div>
-                                                        <div className={classes.shareIconBox}>
-                                                        <BsShare className={classes.shareIcon}/>
-                                                        </div>
+                                                       
+                                                        <button disabled="true" className={classes.registerButton}>Register</button>
+                                                        
                                                     </div>
                                             </div>
                                         </div>

@@ -31,18 +31,20 @@
     flex-wrap: wrap;
     margin-bottom: 5vh;
     color: white;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
 
 .event-box{
     min-height: 50vh;
-    width: 30%;
+    width: 26%;
     background-color:#1e1e1e;
     margin: 1%;
    border-radius: 16px;
    padding: 0%;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
 }
 
 .button{
@@ -144,17 +146,25 @@
     padding-left: 5%;
 }
 
-.shareIconBox{
-    height: 35px;
-    width: 35px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.registerButton{
+    height: 6vh;
+    width: 30%;
     cursor: pointer;
-    margin-right: 4%;
+    margin-right: 5%;
+    border-radius: 30px;
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid royalblue;
+    color: royalblue;
+    font-size: 0.9rem;
+    letter-spacing:0.2mm;
 }
 
-.shareIconBox:hover{
-    background-color: #494949;
+/* .registerButton:hover{
+    background-color: #4a4545;
+} */
+
+.registerButton:disabled{
+    cursor: no-drop;
 }

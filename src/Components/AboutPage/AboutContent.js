@@ -1,5 +1,6 @@
 import classes from "./AboutContent.module.css";
 import {BsGithub,BsLinkedin} from "react-icons/bs";
+import { useSelector } from "react-redux/es/exports";
 
 
 const socialMediaIcons=[
@@ -8,7 +9,7 @@ const socialMediaIcons=[
         icon:BsGithub
     },
     {
-        id:4,
+        id:2,
         icon:BsLinkedin
     }
 ]
@@ -85,6 +86,10 @@ const coreTeamData=[
 
 
 const AboutContent=()=>{
+
+    const communityData=useSelector((state)=>state.community);
+    console.log(communityData);
+
     return (
         <div className={classes.container}>
                 <div className={classes.headerBox}><h1>Our Core<span> Team</span></h1></div>

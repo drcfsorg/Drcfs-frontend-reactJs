@@ -1,5 +1,11 @@
 import "./App.css";
 
+
+//react redux
+import fetchCommunityInfo from "./Store/community-action";
+import { useDispatch} from "react-redux";
+import { useEffect } from "react";
+
 //Header and Footer Import
 import Header from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
@@ -14,11 +20,19 @@ import Event from "./Pages/event";
 import About from "./Pages/about";
 import DataSet from "./Pages/datasets";
 
+
 //
 
 import { Routes, Route, Navigate } from "react-router";
 
 function App() {
+
+  const dispatch=useDispatch();
+
+  useEffect(()=>{
+    dispatch(fetchCommunityInfo());
+  },[dispatch]);
+
   return (
     <div className="App">
       <Header />

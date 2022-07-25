@@ -88,28 +88,35 @@ const coreTeamData=[
 const AboutContent=()=>{
 
     const communityData=useSelector((state)=>state.community);
-    console.log(communityData);
+    const isLoading=communityData.isLoading;
+    const communityArray=communityData.communityMembers;
+
+
+   
+    console.log(isLoading)
 
     return (
         <div className={classes.container}>
                 <div className={classes.headerBox}><h1>Our Core<span> Team</span></h1></div>
                 <div className={classes.insideBox}>
                     {
-                        coreTeamData.map((item)=>{
-                            return <div className={classes["member-Box"]} key={item.id}>
+                      isLoading===true?<div className={classes.spinner}>
+                                
+                      </div>  :communityArray.map((data)=>{
+                            return <div className={classes["member-Box"]} key={data.name}>
                                    <div className={classes.imgBox}>
-                                    <img className={classes.img} src={item.imageURL} alt={item.name}/>
+                                    <img className={classes.img} src={data.profileImage} alt={data.name}/>
                                     <div className={classes.hoverBox}>
-                                      <a className={classes.iconBox} href={item.github} target="_blank"> <BsGithub /></a>
-                                       <a className={classes.iconBox} href={item.linkedin} target="_blank"><BsLinkedin /></a>
+                                      <a className={classes.iconBox} href={data.github} target="_blank"> <BsGithub /></a>
+                                       <a className={classes.iconBox} href={data.linkedin} target="_blank"><BsLinkedin /></a>
                                     
                                     </div>
                                    </div>
                                     <div className={classes.teamheaderBox}>
-                                        <span>{item.name}</span>
+                                        <span>{data.name}</span>
                                     </div>
                                     <div className={classes.roleBox}>
-                                        <span>{item.role}</span>
+                                        <span>{data.role}</span>
                                     </div>
                             </div>
                         })

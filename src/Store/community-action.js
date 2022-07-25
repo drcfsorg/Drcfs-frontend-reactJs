@@ -2,11 +2,15 @@ import { communityAction } from "./community-slice";
 
 const fetchCommunityInfo=()=>{
     return async(dispatch)=>{
+        
         const fetchData=async()=>{
             const response=await fetch("https://drcfswebapi.herokuapp.com/api/getinfo/communitymembers/",{
-                mode:"no-cors"
             });
+            if(!response.ok){
+                throw new Error("Could not fetch the Data");
+            }
             const jsonData=await response.json();
+        
             const arrItems=[];
             jsonData.map((data)=>{
                 arrItems.push({
@@ -25,12 +29,17 @@ const fetchCommunityInfo=()=>{
         }
 
         try{
+           
             const data=await fetchData();
             dispatch(
                 communityAction.replaceProductList({
-                    items:[1,2,3,4,5]
-                })
+                    items:data
+                }),
             )
+
+            dispatch(communityAction.isLoading({
+                isLoading:false
+            }))
         }catch(err){
             console.log(err);   
         }

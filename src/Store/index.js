@@ -4,7 +4,8 @@ import ProductSlice from "./community-slice";
 
 const store=configureStore({
     reducer:{
-        community:ProductSlice.reducer
+        community:ProductSlice.reducer,
+        
     }
 
 });

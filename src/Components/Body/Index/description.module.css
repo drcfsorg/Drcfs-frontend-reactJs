@@ -60,6 +60,7 @@
 }
 
 .linkedin-button{
+    text-decoration: none;
     color: var(---font-color);
     width: var(--button-width);
     height: var(--button-height);
@@ -87,6 +88,7 @@
 }
 
 .discord-button{
+    text-decoration: none;
     color: var(---font-color);
     width: var(--button-width);
     height: var(--button-height);

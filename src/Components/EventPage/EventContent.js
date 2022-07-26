@@ -72,7 +72,7 @@ const EventContent=()=>{
                             return(
                                     <div key={event.id} className={classes["event-box"]}>
                                         <div className={classes.imgBox}>
-                                         <img className={classes.img} src={event.imgUrl} alt={event.name}/>
+                                         <img className={classes.img} src={event.eventImage} alt={event.title}/>
                                         </div>
                                         <div className={classes["caption-Box"]}>
                                             <div className={classes["eventName-Box"]}>
@@ -86,7 +86,7 @@ const EventContent=()=>{
                                                     <div className={classes.dateBox}>
                                                         <div className={classes["date-Calendar"]}>
                                                             <IoCalendarSharp/>
-                                                            <p>{event.date}</p>
+                                                            <p>{event.date} - {event.time}</p>
                                                         </div>
                                                        
                                                         <button disabled="true" className={classes.registerButton}>Register</button>

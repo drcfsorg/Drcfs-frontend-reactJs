@@ -24,9 +24,10 @@
 }
 
 .eventsBox{
+    
     margin-top: 8vh;
     width: 95%;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5vh;
@@ -37,7 +38,6 @@
 
 
 .event-box{
-    min-height: 50vh;
     width: 26%;
     background-color:#1e1e1e;
     margin: 1%;

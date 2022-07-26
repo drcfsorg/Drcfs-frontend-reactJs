@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={
-    isLoading:true,
-    communityMembers:[]
+    communityMembers:[],
+  
 }
 
 const CommunitySlice=createSlice({
@@ -11,11 +11,10 @@ const CommunitySlice=createSlice({
     reducers:{
         replaceProductList(state,action){
             state.communityMembers=action.payload.items;
+           
         },
 
-        isLoading(state,action){
-                state.isLoading=action.payload.isLoading
-        }
+       
     }
 });
 

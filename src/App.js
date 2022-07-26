@@ -3,6 +3,7 @@ import "./App.css";
 
 //react redux
 import fetchCommunityInfo from "./Store/community-action";
+import eventsCommunityInfo from "./Store/events";
 import { useDispatch} from "react-redux";
 import { useEffect } from "react";
 
@@ -31,6 +32,7 @@ function App() {
 
   useEffect(()=>{
     dispatch(fetchCommunityInfo());
+    dispatch(eventsCommunityInfo());
   },[dispatch]);
 
   return (

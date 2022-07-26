@@ -37,9 +37,7 @@ const fetchCommunityInfo=()=>{
                 }),
             )
 
-            dispatch(communityAction.isLoading({
-                isLoading:false
-            }))
+        
         }catch(err){
             console.log(err);   
         }

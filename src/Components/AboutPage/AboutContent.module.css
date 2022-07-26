@@ -136,21 +136,22 @@
     width: 40px;
     background-color: transparent;
     border-radius: 50px;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border: 2px solid transparent;
-    animation-name: spinner1;
-    animation-duration: 3s;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border: 10px solid transparent;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
 
 }
 
-@keyframes spinner1 {
-    from{
+@keyframes spin {
+    0%{
         transform: rotate(0deg);
     }
 
-    to{
+    100%{
         transform: rotate(360deg);
     }
 }

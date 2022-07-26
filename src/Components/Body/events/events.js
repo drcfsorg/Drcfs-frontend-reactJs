@@ -3,6 +3,7 @@ import {MdArrowForwardIos} from "react-icons/md";
 import demoImg from "../../../Assets/microsoft101.png";
 import {BsPersonFill,BsShare} from "react-icons/bs";
 import {IoCalendarSharp} from "react-icons/io5";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 
 
@@ -11,47 +12,13 @@ import {IoCalendarSharp} from "react-icons/io5";
 
 const caption = "Join our DRCFS community to upskill your data science and machine learning skills from industry experts."
 
-//this is just a dummy data to show the event box format
-//Number of event should be limited to only 8 for the homepage 
-const events=[
-    {
-        id:1,
-        name:"Lorem ipsum dolor sit amet",
-        imgUrl:demoImg,
-        speaker:"Kp Oli,Founder - Guffadi Club",
-        date:"Jun 26,2022-7:45 pm"
-    },
-    {
-        id:2,
-        name:"Lorem ipsum dolor sit amet",
-        imgUrl:demoImg,
-        speaker:"Kp Oli,Founder - Guffadi Club",
-        date:"Jun 26,2022-7:45 pm"
-    },
-    {
-        id:3,
-        name:"Lorem ipsum dolor sit amet",
-        imgUrl:demoImg,
-        speaker:"Kp Oli,Founder - Guffadi Club",
-        date:"Jun 26,2022-7:45 pm"
-    },
-    {
-        id:4,
-        name:"Lorem ipsum dolor sit amet",
-        imgUrl:demoImg,
-        speaker:"Kp Oli,Founder - Guffadi Club",
-        date:"Jun 26,2022-7:45 pm"
-    },
-    {
-        id:5,
-        name:"Lorem ipsum dolor sit amet",
-        imgUrl:demoImg,
-        speaker:"Kp Oli,Founder - Guffadi Club",
-        date:"Jun 26,2022-7:45 pm"
-    }
-]
+
+
 
 function Events() {
+    const eventsObject=useSelector((state)=>state.events)
+    const events=eventsObject.events;
+
     return (
         <div className={classes.container}>
             <div className={classes.box}>
@@ -64,13 +31,13 @@ function Events() {
                         {
                             events.map((event)=>{
                                 return(
-                                    <div key={event.id} className={classes["event-box"]}>
+                                    <div key={event.title} className={classes["event-box"]}>
                                         <div className={classes.imgBox}>
-                                         <img className={classes.img} src={event.imgUrl} alt={event.name}/>
+                                         <img className={classes.img} src={event.eventImage} alt={event.title}/>
                                         </div>
                                         <div className={classes["caption-Box"]}>
                                             <div className={classes["eventName-Box"]}>
-                                                <span className={classes.span}>{event.name}</span>
+                                                <span className={classes.span}>{event.title}</span>
                                             </div>
                                             <div className={classes["eventName-BoxSpeaker"]}>
                                                     <div className={classes.speakerBox}>
@@ -80,7 +47,7 @@ function Events() {
                                                     <div className={classes.dateBox}>
                                                         <div className={classes["date-Calendar"]}>
                                                             <IoCalendarSharp/>
-                                                            <p>{event.date}</p>
+                                                            <p>{event.date} - {event.time}</p>
                                                         </div>
                                                         <div className={classes.shareIconBox}>
                                                         <BsShare className={classes.shareIcon}/>

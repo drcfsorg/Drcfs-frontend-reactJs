@@ -3,7 +3,7 @@ import { eventsAction } from "./events-slice";
 const eventsCommunityInfo=()=>{
     return async(dispatch)=>{
            const fetchEvents=async()=>{
-                const response=await fetch("https://drcfswebapi.herokuapp.com/api/getinfo/events/");
+                const response=await fetch("https://drcfsapi.herokuapp.com/api/getinfo/events/");
                 if(!response.ok){
                     throw new Error("Could not fetched data");
                 }

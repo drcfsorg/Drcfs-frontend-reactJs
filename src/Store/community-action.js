@@ -4,7 +4,7 @@ const fetchCommunityInfo=()=>{
     return async(dispatch)=>{
         
         const fetchData=async()=>{
-            const response=await fetch("https://drcfswebapi.herokuapp.com/api/getinfo/communitymembers/",{
+            const response=await fetch("https://drcfsapi.herokuapp.com/api/getinfo/communitymembers/",{
             });
             if(!response.ok){
                 throw new Error("Could not fetch the Data");

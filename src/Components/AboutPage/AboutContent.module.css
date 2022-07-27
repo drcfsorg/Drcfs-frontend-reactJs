@@ -155,3 +155,18 @@
         transform: rotate(360deg);
     }
 }
+
+
+@media (max-width:481px){
+    .member-Box{
+        width: 80%;
+    }
+
+    .imgBox{
+        height: 35vh;
+    }
+
+    .img{
+        object-fit: cover;
+    }
+}

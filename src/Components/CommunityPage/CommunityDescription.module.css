@@ -39,9 +39,10 @@
 
 
 .join-Us-Box .headerBox{
-    width: max-content;
+    width: 90%;
     height: max-content;
     margin-top: 10vh;
+    text-align: center;
     
 }
 
@@ -53,8 +54,8 @@
 .captionBox{
     margin-top: 5vh;
     width: 80%;
-    color: white;
     text-align: center;
+    color: white;
     font-size: 1.3rem;
     font-weight: 400;
     height: max-content;
@@ -72,6 +73,7 @@
 
 
 .linkedin-button{
+    text-decoration: none;
     color: var(--font-color);
     width: var(---button-width);
     height: var(--button-height);
@@ -99,6 +101,7 @@
 }
 
 .discord-button{
+    text-decoration: none;
     margin-left: 5%;
     color: var(--font-color);
     width: var(---button-width);
@@ -124,4 +127,33 @@
 
 .span{
     color: orangered;
+}
+
+
+@media (max-width:481px){
+    .headerBox .h1{
+        width: 95%;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .captionBox{
+        text-align: center;
+        width: 90%;
+    }
+
+    .linkedin-button{
+        font-size: 1.2rem;
+        width: 45%;
+        background-color:#126bc4;
+        height: 6vh;
+    }
+
+    .discord-button{
+        font-size: 1.2rem;
+        width: 45%;
+        background-color:#324fe1 ;
+        height: 6vh;
+    }
 }

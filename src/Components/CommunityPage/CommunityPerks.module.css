@@ -20,7 +20,7 @@
     margin-top: 5vh;
     margin-bottom: 5vh;
     width: 90%;
-    min-height: 60vh;
+    min-height: 20vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -29,7 +29,7 @@
 
 .perkBox{
     width: 40%;
-    min-height: 60vh;
+    min-height: max-content;
     background-color: #31343c;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -43,16 +43,59 @@
     color: white;
     text-align: center;
     padding-top: 3vh;
+    
 }
 
 .listBox{
-    height: 52vh;
+    min-height: 25vh;
     width: 100%;
-    background-color: royalblue;
+    color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-left: 8%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+
+}
+
+.listBox li{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 2vh;
+    list-style: none;
+}
+
+.listBox li::before{
+    content: "\2022";
+    color: orangered;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.0em;
+    margin-left: -1em;
+    
 }
 
 .span{
     color: orangered;
+}
+
+
+@media (max-width:481px) {
+        .header-Box{
+            font-size: 1.1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .perkBox{
+            width: 90%;
+        }
+
+        .listBox{
+            padding-left:10%;
+        }
 }

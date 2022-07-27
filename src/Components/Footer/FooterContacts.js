@@ -6,28 +6,32 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const email = "johnysins6969@gmail.org";
+const email = "drcfs@gmail.com";
 
 const contactIcons = [
   { 
     id:1,
     icon: FaDiscord,
     name: "discord",
+    link:""
   },
   {
     id:2,
     icon: FaLinkedinIn,
     name: "discord",
+    link:""
   },
   { 
     id:3,
     icon: FaFacebookF,
     name: "discord",
+    link:""
   },
   {
     id:4,
     icon: FaInstagram,
     name: "discord",
+    link:""
   },
 ];
 
@@ -43,9 +47,9 @@ const FooterContacts = () => {
       <div className={classes.contactBox}>
         {
             contactIcons.map((icon)=>{
-                return <div className={classes.iconBox} key={icon.id}>
+                return <a className={classes.iconBox} key={icon.id}>
                     {<icon.icon/>}
-                </div>
+                </a>
             })
         }
       </div>

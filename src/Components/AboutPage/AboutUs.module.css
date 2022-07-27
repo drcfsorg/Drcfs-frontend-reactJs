@@ -19,17 +19,28 @@
     flex-direction: column;
     text-align: center;
     
+    
 }
 
-.headerBox h1{
-    font-family: 'Pacifico', cursive;
-}
+
 
 .headerBox span{
     color: royalblue;
 }
 
 .headerBox p{
+    margin-top: 2vh;
     font-weight: 400;
     font-size: 1.2rem;
+}
+
+
+@media (max-width:481px){
+    .headerBox{
+        margin-top: 15vh;
+    }
+
+    .headerBox h1{
+            font-size: 1.5rem;
+    }
 }

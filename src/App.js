@@ -1,5 +1,6 @@
 import "./App.css";
-
+import React,{Suspense} from "react";
+import { Routes, Route, Navigate } from "react-router";
 
 //react redux
 import fetchCommunityInfo from "./Store/community-action";
@@ -15,16 +16,22 @@ import Footer from "./Components/Footer/footer";
 
 //Pages import
 
-import HomePage from "./Pages/home";
-import Community from "./Pages/community";
-import Event from "./Pages/event";
-import About from "./Pages/about";
-import DataSet from "./Pages/datasets";
+// import HomePage from "./Pages/home";
+// import Community from "./Pages/community";
+// import Event from "./Pages/event";
+// import About from "./Pages/about";
+// import DataSet from "./Pages/datasets";
+
+const HomePage=React.lazy(()=>import("./Pages/home"));
+const Community=React.lazy(()=>import("./Pages/community"));
+const Event=React.lazy(()=>import("./Pages/event"));
+const About=React.lazy(()=>import("./Pages/about"));
+const DataSet=React.lazy(()=>import("./Pages/datasets"));
 
 
 //
 
-import { Routes, Route, Navigate } from "react-router";
+
 
 function App() {
 
@@ -50,6 +57,12 @@ function App() {
         <span>Welcome to our beta webiste 🎉</span>
       </div>
       <Header />
+      <Suspense fallback={<div className="loadingBox">
+
+          <div className="spinner">
+
+          </div>
+      </div>}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/community" element={<Community />} />
@@ -58,6 +71,7 @@ function App() {
         <Route path="/datasets" element={<DataSet />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      </Suspense>
       <Footer />
     </div>
   );

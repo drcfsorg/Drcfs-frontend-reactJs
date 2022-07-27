@@ -4,59 +4,6 @@ import {IoCalendarSharp} from "react-icons/io5";
 import { useSelector } from "react-redux";
 
 
-//this data must be fetched from the backend api
-// const events=[
-//     {
-//         id:1,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:2,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:3,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:4,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:5,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:6,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-//     {
-//         id:7,
-//         name:"Lorem ipsum dolor sit amet",
-//         imgUrl:demoImg,
-//         speaker:"Kp Oli,Founder - Guffadi Club",
-//         date:"Jun 26,2022-7:45 pm"
-//     },
-// ]
-
 const EventContent=()=>{
     const eventsObject=useSelector((state)=>state.events)
     const events=eventsObject.events;
@@ -69,7 +16,7 @@ const EventContent=()=>{
                     {
                         events.map((event)=>{
                             return(
-                                    <div key={event.id} className={classes["event-box"]}>
+                                    <div key={event.title} className={classes["event-box"]}>
                                         <div className={classes.imgBox}>
                                          <img className={classes.img} src={event.eventImage} alt={event.title}/>
                                         </div>
@@ -88,7 +35,7 @@ const EventContent=()=>{
                                                             <p>{event.date} - {event.time}</p>
                                                         </div>
                                                        
-                                                        <button disabled="true" className={classes.registerButton}>Register</button>
+                                                        <button disabled className={classes.registerButton}>Register</button>
                                                         
                                                     </div>
                                             </div>

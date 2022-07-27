@@ -30,6 +30,7 @@ const headers = [
 
 const Header = () => {
   const [clicked, setIsClicked] = useState(false);
+  let width=window.innerWidth;
   
 
   const onClickHandler = () => {
@@ -44,10 +45,17 @@ const Header = () => {
 
   const navClass=clicked?classes.nav1:classes.navList;
 
+  console.log(width);
+  console.log(clicked);
 
   //To scroll to the top of the page
   const onNavClick=()=>{
     window.scrollTo(0,0);
+    if(width<=481){
+        setIsClicked(false);
+    }
+
+    
   }
 
 
@@ -55,7 +63,7 @@ const Header = () => {
       <nav className={classes.navBar}>
 
         <div className={classes.mobileBox}>
-          <img className={classes.imageIcon} src={drcfsIcon} alt="DRCFS Logo" />
+        <NavLink to="/" className={classes.imageIcon}><img className={classes.img} src={drcfsIcon} alt="DRCFS Logo" /></NavLink>
           <div className={lineClass} onClick={onClickHandler}>
             <div className={classes.line}></div>
           </div>

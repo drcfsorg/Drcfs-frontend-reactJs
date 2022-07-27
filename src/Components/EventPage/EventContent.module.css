@@ -120,7 +120,8 @@
 }
 .speakerBox p{
     padding-left: 2%;
-    font-weight: 400;
+    font-weight: bold;
+    
 }
 
 .dateBox{
@@ -140,10 +141,13 @@
     align-items: center;
     padding-left: 4%;
     box-sizing: border-box;
+    
 }
 
 .date-Calendar p{
     padding-left: 5%;
+    color:orangered ;
+    font-weight: bold;
 }
 
 .registerButton{
@@ -167,4 +171,15 @@
 
 .registerButton:disabled{
     cursor: no-drop;
+}
+
+
+@media (max-width:481px){
+        .headerBox{
+            font-size: 1.2rem;
+        }
+
+        .event-box{
+            width: 90%;
+        }
 }

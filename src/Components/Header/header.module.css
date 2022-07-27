@@ -29,6 +29,7 @@
     position: sticky;
     top: 0%;
     z-index: 100;
+    
 }
 
 .mobileBox {
@@ -45,8 +46,15 @@
 .imageIcon {
     height: 100%;
     width: 100%;
+    
+}
+
+.img{
+    height: 100%;
+    width: 100%;
     object-fit: fill;
     border-radius: 50px;
+
 }
 
 .navList {
@@ -169,6 +177,11 @@
         margin-left: 2%;
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+
+    .imageIcon .img{
+        height: 100%;
+        width: 100%;
     }
 
     .lineBox {

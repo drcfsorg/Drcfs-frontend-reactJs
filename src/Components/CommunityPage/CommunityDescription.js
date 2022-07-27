@@ -2,7 +2,7 @@ import classes from "./CommunityDescription.module.css";
 import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
 
 const caption =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  "Data Research Council For Students(DRCFS) is a student-led community based in Nepal,established to spread digital literacy and Data Science Knowledge all over the country.A community backed by industrial tech experts.Our community has passionate students who come from unique backgrounds.";
 
 const CommunityDescription = () => {
   return (
@@ -17,14 +17,14 @@ const CommunityDescription = () => {
           <p>{caption}</p>
         </div>
         <div className={classes.buttonBox}>
-          <button className={classes["linkedin-button"]}>
+          <a className={classes["linkedin-button"]} href="https://www.linkedin.com/company/data-research-council-for-students/mycompany/" target="_blank" rel="noreferrer">
             <span>Join linkedin</span>
             <FaLinkedinIn className={classes.icon} />
-          </button>
-          <button className={classes["discord-button"]}>
+          </a>
+          <a className={classes["discord-button"]} href="https://discord.gg/TEHNbNvRnh" target="_blank" rel="noreferrer">
             <span>Join Discord</span>
             <FaDiscord className={classes.icon} />
-          </button>
+          </a>
         </div>
       </div>
     </div>

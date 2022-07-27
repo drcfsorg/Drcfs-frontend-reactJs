@@ -24,7 +24,7 @@ function Events() {
                 <div className={classes["box-header"]}>
                     <span className={classes.title}><span className={classes["decorate-title"]}>Events</span> for DRCFS Members</span>
                     <span className={classes.caption}>{caption}</span>
-                    <a href="https://www.youtube.com/" className={classes["join-link"]}><span >Join Now!</span></a>
+                    <a href="https://discord.gg/TEHNbNvRnh" className={classes["join-link"]} target="_blank" rel="noreferrer" ><span >Join Now!</span></a>
                 </div>
                 <div className={classes["events-box"]}>
                         {

@@ -37,6 +37,18 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{
+        height:"10vh",
+        width:"100%",
+        backgroundColor:"royalblue",
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+        color:"white",
+        fontSize:"1.1rem"
+      }}>
+        <span>Welcome to our beta webiste 🎉</span>
+      </div>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />

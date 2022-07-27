@@ -1,5 +1,4 @@
 import classes from "./EventContent.module.css";
-import demoImg from "../../Assets/microsoft101.png";
 import {BsPersonFill} from "react-icons/bs";
 import {IoCalendarSharp} from "react-icons/io5";
 import { useSelector } from "react-redux";

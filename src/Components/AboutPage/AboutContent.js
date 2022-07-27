@@ -24,8 +24,8 @@ const AboutContent=()=>{
                                    <div className={classes.imgBox}>
                                     <img className={classes.img} src={data.profileImage} alt={data.name}/>
                                     <div className={classes.hoverBox}>
-                                      <a className={classes.iconBox} href={data.github} target="_blank"> <BsGithub /></a>
-                                       <a className={classes.iconBox} href={data.linkedin} target="_blank"><BsLinkedin /></a>
+                                      <a className={classes.iconBox} href={data.github} target="_blank" rel="noreferrer"> <BsGithub /></a>
+                                       <a className={classes.iconBox} href={data.linkedin} target="_blank" rel="noreferrer"><BsLinkedin /></a>
                                     
                                     </div>
                                    </div>

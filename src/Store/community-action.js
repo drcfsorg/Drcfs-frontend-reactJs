@@ -13,7 +13,7 @@ const fetchCommunityInfo=()=>{
         
             const arrItems=[];
             jsonData.map((data)=>{
-                arrItems.push({
+                return arrItems.push({
                     name:data.name,
                     role:data.role,
                     github:data.github,

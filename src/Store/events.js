@@ -10,7 +10,7 @@ const eventsCommunityInfo=()=>{
                 const data=await response.json();
                 const eventsItems=[];
                 data.map((event)=>{
-                    eventsItems.push({
+                   return eventsItems.push({
                         title:event["event title"],
                         date:event["event date"],
                         time:event["event time"],

@@ -90,7 +90,8 @@
 }
 
 .eventName-Box{
-    height: 5vh;
+    min-height: 5vh;
+    padding-top: 5%;
     width: 100%;
     padding-left: 4%;
     box-sizing: border-box;

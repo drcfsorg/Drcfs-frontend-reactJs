@@ -45,9 +45,6 @@ const Header = () => {
 
   const navClass=clicked?classes.nav1:classes.navList;
 
-  console.log(width);
-  console.log(clicked);
-
   //To scroll to the top of the page
   const onNavClick=()=>{
     window.scrollTo(0,0);

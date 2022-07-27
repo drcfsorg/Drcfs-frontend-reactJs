@@ -6,48 +6,55 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-const email = "drcfs@gmail.com";
+const email = "mail@drcfs.org";
 
 const contactIcons = [
   { 
     id:1,
     icon: FaDiscord,
     name: "discord",
-    link:""
+    link:"https://discord.gg/TEHNbNvRnh"
   },
   {
     id:2,
     icon: FaLinkedinIn,
-    name: "discord",
-    link:""
+    name: "linkedin",
+    link:"https://www.linkedin.com/company/data-research-council-for-students/mycompany/"
   },
   { 
     id:3,
     icon: FaFacebookF,
-    name: "discord",
-    link:""
+    name: "Facebook",
+    link:"https://www.facebook.com/profile.php?id=100077228320202"
   },
   {
     id:4,
     icon: FaInstagram,
-    name: "discord",
-    link:""
+    name: "Instagram",
+    link:"https://www.linkedin.com/company/data-research-council-for-students/mycompany/"
   },
 ];
 
 const FooterContacts = () => {
+  const onClickHandlerEmail=()=>{
+    return window.open(`mailto:${email}`);
+  }
+
+
+
+
   return (
     <div className={classes.container}>
       <div>
         <h1>Contacts</h1>
       </div>
       <div className={classes.list}>
-        <p> {email}</p>
+        <p onClick={onClickHandlerEmail}> {email}</p>
       </div>
       <div className={classes.contactBox}>
         {
             contactIcons.map((icon)=>{
-                return <a className={classes.iconBox} key={icon.id}>
+                return <a className={classes.iconBox} key={icon.id} href={icon.link} target="_blank" rel="noreferrer">
                     {<icon.icon/>}
                 </a>
             })

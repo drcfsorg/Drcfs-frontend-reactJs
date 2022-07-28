@@ -23,7 +23,7 @@ const headers = [
   },
   {
     id:4,
-    headerName:"DataSets",
+    headerName:"Datasets",
     path:"/datasets"
   }
 ];

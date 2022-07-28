@@ -1,14 +1,40 @@
 import classes from "./OtherLinks.module.css";
+import { NavLink } from "react-router-dom";
 
 
 const navList=[
-    "Community",
-    "Data Set",
-    "Events",
-    "Feedbacks"
+    {
+        id:1,
+        name:"Community",
+        link:"/community"
+
+    },
+    {
+        id:2,
+        name:"Events",
+        link:"/events"
+
+    },
+    {
+        id:3,
+        name:"About",
+        link:"/about"
+
+    },
+    {
+        id:4,
+        name:"DataSets",
+        link:"/datasets"
+
+    }
+   
 ]
 
 const FooterOtherLinks=()=>{
+    const onClickHandler=()=>{
+        window.scrollTo(0,0);
+    }
+
     return(
         <div className={classes.container}>
                 <div>
@@ -17,8 +43,8 @@ const FooterOtherLinks=()=>{
                 <div className={classes.list}>
                 {
                     navList.map((item)=>{
-                       return  <div key={item} className={classes["list-div"]}>
-                            <p>{item}</p>
+                       return  <div key={item.id} className={classes["list-div"]}>
+                            <NavLink onClick={onClickHandler} to={item.link}>{item.name}</NavLink>
                         </div>
                     })
                 }

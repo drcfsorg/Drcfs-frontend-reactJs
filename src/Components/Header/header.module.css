@@ -29,6 +29,7 @@
     position: sticky;
     top: 0%;
     z-index: 100;
+    
 }
 
 .mobileBox {
@@ -45,12 +46,19 @@
 .imageIcon {
     height: 100%;
     width: 100%;
+    
+}
+
+.img{
+    height: 100%;
+    width: 100%;
     object-fit: fill;
     border-radius: 50px;
+
 }
 
 .navList {
-    width: 60%;
+    width: 45%;
     height: auto;
     margin-right: 2%;
     box-sizing: border-box;
@@ -90,19 +98,19 @@
 .ulList li {
     cursor: pointer;
     color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.0rem;
+    font-weight: 500;
 }
 
 .button {
-    height: 6vh;
+    cursor:not-allowed;
+    height: 5vh;
     width: 20%;
     color: royalblue;
     background-color: transparent;
     border-radius: 30px;
     font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border: 2px solid royalblue;
 }
 
@@ -168,6 +176,11 @@
         margin-left: 2%;
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+
+    .imageIcon .img{
+        height: 100%;
+        width: 100%;
     }
 
     .lineBox {

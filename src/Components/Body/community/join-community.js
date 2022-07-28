@@ -8,14 +8,14 @@ const JoinCommunity = () => {
             <h1 className={classes.h1}>Join Drcfs Community</h1>
       </div>
       <div className={classes["button-Box"]}>
-        <button className={classes["linkedin-button"]}>
+        <a className={classes["linkedin-button"]} href="https://www.linkedin.com/company/data-research-council-for-students/mycompany/" target="_blank" rel="noreferrer">
           <span>Join linkedin</span>
           <FaLinkedinIn className={classes.icon} />
-        </button>
-        <button className={classes["discord-button"]}>
+        </a>
+        <a className={classes["discord-button"]} href="https://discord.gg/TEHNbNvRnh" target="_blank" rel="noreferrer">
           <span>Join Discord</span>
           <FaDiscord className={classes.icon} />
-        </button>
+        </a>
       </div>
     </div>
   );

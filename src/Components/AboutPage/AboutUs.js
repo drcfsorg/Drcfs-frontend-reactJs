@@ -1,7 +1,7 @@
 import classes from "./AboutUs.module.css";
 
 
-const description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+const description="Data Research Council For Students(DRCFS) is a student-led community based in Nepal,established to spread digital literacy and Data Science Knowledge all over the country.A community backed by industrial tech experts.Our community has passionate students who come from unique backgrounds."
 
 
 const AboutUs=()=>{

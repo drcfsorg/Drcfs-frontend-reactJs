@@ -23,13 +23,14 @@ const headers = [
   },
   {
     id:4,
-    headerName:"DataSets",
+    headerName:"Datasets",
     path:"/datasets"
   }
 ];
 
 const Header = () => {
   const [clicked, setIsClicked] = useState(false);
+  let width=window.innerWidth;
   
 
   const onClickHandler = () => {
@@ -44,10 +45,14 @@ const Header = () => {
 
   const navClass=clicked?classes.nav1:classes.navList;
 
-
   //To scroll to the top of the page
   const onNavClick=()=>{
     window.scrollTo(0,0);
+    if(width<=481){
+        setIsClicked(false);
+    }
+
+    
   }
 
 
@@ -55,7 +60,7 @@ const Header = () => {
       <nav className={classes.navBar}>
 
         <div className={classes.mobileBox}>
-          <img className={classes.imageIcon} src={drcfsIcon} alt="DRCFS Logo" />
+        <NavLink to="/" className={classes.imageIcon}><img className={classes.img} src={drcfsIcon} alt="DRCFS Logo" /></NavLink>
           <div className={lineClass} onClick={onClickHandler}>
             <div className={classes.line}></div>
           </div>
@@ -76,7 +81,7 @@ const Header = () => {
               </div>
             );
           })}
-          <button className={classes.button}>Sign In</button>
+          <button className={classes.button} disabled>Sign In</button>
         </ul>
         </div>
       </nav>

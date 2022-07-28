@@ -28,6 +28,15 @@
     justify-content: space-around;
 }
 
+.contactBox a{
+    color: white;
+    list-style: none;
+}
+
+.contactBox a:hover{
+    color: rgb(193, 74, 0);
+}
+
 .iconBox{
     height: 50px;
     width: 50px;

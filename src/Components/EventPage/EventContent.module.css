@@ -24,9 +24,10 @@
 }
 
 .eventsBox{
+    
     margin-top: 8vh;
     width: 95%;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5vh;
@@ -37,7 +38,6 @@
 
 
 .event-box{
-    min-height: 50vh;
     width: 26%;
     background-color:#1e1e1e;
     margin: 1%;
@@ -90,7 +90,8 @@
 }
 
 .eventName-Box{
-    height: 5vh;
+    min-height: 5vh;
+    padding-top: 5%;
     width: 100%;
     padding-left: 4%;
     box-sizing: border-box;
@@ -120,7 +121,8 @@
 }
 .speakerBox p{
     padding-left: 2%;
-    font-weight: 400;
+    font-weight: bold;
+    
 }
 
 .dateBox{
@@ -140,10 +142,13 @@
     align-items: center;
     padding-left: 4%;
     box-sizing: border-box;
+    
 }
 
 .date-Calendar p{
     padding-left: 5%;
+    color:orangered ;
+    font-weight: bold;
 }
 
 .registerButton{
@@ -167,4 +172,15 @@
 
 .registerButton:disabled{
     cursor: no-drop;
+}
+
+
+@media (max-width:481px){
+        .headerBox{
+            font-size: 1.2rem;
+        }
+
+        .event-box{
+            width: 90%;
+        }
 }

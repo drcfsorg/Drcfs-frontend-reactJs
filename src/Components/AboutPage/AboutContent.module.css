@@ -1,10 +1,11 @@
 .container {
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: #141414;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .headerBox {
@@ -23,7 +24,7 @@
 
 .insideBox {
     min-height: 40vh;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -31,9 +32,8 @@
 }
 
 .member-Box {
-    min-height: 50vh;
+    min-height: 20vh;
     width: 20%;
-    background-color: #444548;
     margin: 5%;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
 
 
 .imgBox {
-    height: 40vh;
+    height: 35vh;
     width: 100%;
     position: relative;
 }
@@ -51,11 +51,13 @@
 .img {
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     position: absolute;
     top: 0%;
     cursor: pointer;
     z-index: 1;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
 }
 
 .hoverBox {
@@ -103,7 +105,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
 }
 
 
@@ -126,4 +130,44 @@
 
 .iconBox:hover {
     transform: scale(1.2);
+}
+
+.spinner{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 50px;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border: 10px solid transparent;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width:481px){
+    .member-Box{
+        width: 80%;
+    }
+
+    .imgBox{
+        height: 35vh;
+    }
+
+    .img{
+        object-fit: cover;
+    }
 }

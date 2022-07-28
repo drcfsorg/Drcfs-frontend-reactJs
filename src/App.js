@@ -54,7 +54,7 @@ function App() {
         color:"white",
         fontSize:"1.1rem"
       }}>
-        <span>Welcome to our beta webiste 🎉</span>
+        <span>Welcome to our beta website 🎉</span>
       </div>
       <Header />
       <Suspense fallback={<div className="loadingBox">

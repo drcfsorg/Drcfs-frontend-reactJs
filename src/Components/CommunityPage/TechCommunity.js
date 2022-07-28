@@ -12,19 +12,19 @@ const technologiesStack = [
     id: 2,
     communityName: "Data Science",
     imageURL: SiPython,
-    description: "Machine Learning Practitioner,engineer who have years of experiences.",
+    description: "Industry experts who have years of experience in data science.",
   },
   {
     id: 3,
     communityName: "Mobile Dev",
     imageURL: SiFlutter,
-    description: "Machine Learning Practitioner,engineer who have years of experiences.",
+    description: "Energetic and enthusiastic Flutter and React Native developers.",
   },
   {
     id: 4,
     communityName: "Web Dev",
     imageURL: SiReact,
-    description: "Machine Learning Practitioner,engineer who have years of experiences.",
+    description: "Experienced and skilled web developers who are leading in industry.",
   },
 ];
 

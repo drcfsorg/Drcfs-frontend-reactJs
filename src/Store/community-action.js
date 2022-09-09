@@ -17,8 +17,8 @@ const fetchCommunityInfo=()=>{
                     name:data.name,
                     role:data.role,
                     github:data.github,
-                    profileImage:data.profile_pic,
-                    linkedin:data.facebook
+                    profileImage:data.picture,
+                    linkedin:data.linkedin
                 });
             });
 

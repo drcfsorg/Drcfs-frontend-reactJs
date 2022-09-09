@@ -32,7 +32,7 @@ const EventContent=()=>{
                                                     <div className={classes.dateBox}>
                                                         <div className={classes["date-Calendar"]}>
                                                             <IoCalendarSharp/>
-                                                            <p>{event.date} - {event.time}</p>
+                                                            <p>{event.date}</p>
                                                         </div>
                                                        
                                                         <button disabled className={classes.registerButton}>Register</button>

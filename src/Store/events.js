@@ -12,8 +12,7 @@ const eventsCommunityInfo=()=>{
                 data.map((event)=>{
                    return eventsItems.push({
                         title:event["event title"],
-                        date:event["event date"],
-                        time:event["event time"],
+                        date:event["event date_time"],
                         location:event["event location"],
                         speaker:event["event speaker"],
                         eventImage:event["event_pic"]

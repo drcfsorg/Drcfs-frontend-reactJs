@@ -46,7 +46,7 @@ function Events() {
                                                     <div className={classes.dateBox}>
                                                         <div className={classes["date-Calendar"]}>
                                                             <IoCalendarSharp/>
-                                                            <p>{event.date} - {event.time}</p>
+                                                            <p>{event.date}</p>
                                                         </div>
                                                         <div className={classes.shareIconBox}>
                                                         <BsShare className={classes.shareIcon}/>

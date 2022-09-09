@@ -186,10 +186,12 @@
     align-items: center;
     padding-left: 4%;
     box-sizing: border-box;
+    
 }
 
 .date-Calendar p{
     padding-left: 5%;
+    color: orangered;
 }
 
 .shareIconBox{

@@ -38,7 +38,7 @@
 
 
 .event-box{
-    width: 26%;
+    width: 30%;
     background-color:#1e1e1e;
     margin: 1%;
    border-radius: 16px;
@@ -120,9 +120,7 @@
 
 }
 .speakerBox p{
-    padding-left: 2%;
-    font-weight: bold;
-    
+    padding-left: 2%;   
 }
 
 .dateBox{
@@ -148,7 +146,6 @@
 .date-Calendar p{
     padding-left: 5%;
     color:orangered ;
-    font-weight: bold;
 }
 
 .registerButton{

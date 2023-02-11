@@ -1,7 +1,5 @@
 import classes from "./description.module.css";
-import {FaDiscord,FaLinkedinIn} from "react-icons/fa";
-
-
+import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
 
 const description =
   "Make smart friends, learn from experts, and network like you’ve never done before. It’s a place to have fun, get amazing opportunities, and make new friends!";
@@ -17,12 +15,24 @@ const Description = () => {
         <p className={classes.p}>{description}</p>
       </div>
       <div className={classes["button-Box"]}>
-        <a className={classes["linkedin-button"]} href="https://www.linkedin.com/company/data-research-council-for-students/mycompany/" target="_blank" rel="noreferrer">
-            <span>Join linkedin</span>
-            <FaLinkedinIn className={classes.icon}/>
+        <a
+          className={classes["linkedin-button"]}
+          href="https://www.linkedin.com/company/drcfs/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span>Join linkedin</span>
+          <FaLinkedinIn className={classes.icon} />
         </a>
-        <a className={classes["discord-button"]} href="https://discord.gg/TEHNbNvRnh" target="_blank" rel="noreferrer" ><span>Join Discord</span>
-        <FaDiscord className={classes.icon}/></a>
+        <a
+          className={classes["discord-button"]}
+          href="https://discord.gg/TEHNbNvRnh"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span>Join Discord</span>
+          <FaDiscord className={classes.icon} />
+        </a>
       </div>
     </div>
   );

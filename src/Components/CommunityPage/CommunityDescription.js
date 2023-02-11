@@ -10,18 +10,29 @@ const CommunityDescription = () => {
       <div className={classes["join-Us-Box"]}>
         <div className={classes.headerBox}>
           <h1 className={classes.h1}>
-            Join Nepal's Largest <span className={classes.span}>Data Science Community</span> 
+            Join Nepal's Largest{" "}
+            <span className={classes.span}>Data Science Community</span>
           </h1>
         </div>
         <div className={classes.captionBox}>
           <p>{caption}</p>
         </div>
         <div className={classes.buttonBox}>
-          <a className={classes["linkedin-button"]} href="https://www.linkedin.com/company/data-research-council-for-students/mycompany/" target="_blank" rel="noreferrer">
+          <a
+            className={classes["linkedin-button"]}
+            href="https://www.linkedin.com/company/drcfs/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span>Join linkedin</span>
             <FaLinkedinIn className={classes.icon} />
           </a>
-          <a className={classes["discord-button"]} href="https://discord.gg/TEHNbNvRnh" target="_blank" rel="noreferrer">
+          <a
+            className={classes["discord-button"]}
+            href="https://discord.gg/TEHNbNvRnh"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span>Join Discord</span>
             <FaDiscord className={classes.icon} />
           </a>

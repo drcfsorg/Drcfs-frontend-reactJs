@@ -15,12 +15,10 @@ const FooterDescription = () => {
 
   return (
     <div className={classes.descBox}>
-      <div className={classes.headerBox}>
-        <span>DR</span>CFS
-      </div>
+      <div className={classes.headerBox}>DRCFS</div>
       <div className={classes.descContainer}>{description}</div>
       <div className={classes.copyRightBox}>
-        <p>&copy;2022 All Rights Reserved to DRCFS</p>
+        <p>&copy;2023 All Rights Reserved to DRCFS</p>
       </div>
     </div>
   );

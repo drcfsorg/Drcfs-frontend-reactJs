@@ -1,5 +1,4 @@
 import depauwLogo from "../../../Assets/depauw.png";
-import goldenGateLogo from "../../../Assets/golden.jpg";
 import howardLogo from "../../../Assets/howard_social.png";
 import microsoftLogo from "../../../Assets/microsoft101.png";
 import tuLogo from "../../../Assets/TU_logo.png";
@@ -22,7 +21,6 @@ const communityLogos = [
   },
 
   { id: 4, imageUrl: depauwLogo, name: "Depauw University" },
-  { id: 5, imageUrl: goldenGateLogo, name: "Golden Gate" },
 ];
 
 export default communityLogos;

@@ -9,39 +9,36 @@ import {
 const email = "mail@drcfs.org";
 
 const contactIcons = [
-  { 
-    id:1,
+  {
+    id: 1,
     icon: FaDiscord,
     name: "discord",
-    link:"https://discord.gg/TEHNbNvRnh"
+    link: "https://discord.com/invite/vEyZsJVS",
   },
   {
-    id:2,
+    id: 2,
     icon: FaLinkedinIn,
     name: "linkedin",
-    link:"https://www.linkedin.com/company/data-research-council-for-students/mycompany/"
-  },
-  { 
-    id:3,
-    icon: FaFacebookF,
-    name: "Facebook",
-    link:"https://www.facebook.com/profile.php?id=100077228320202"
+    link: "https://www.linkedin.com/company/drcfs/",
   },
   {
-    id:4,
+    id: 3,
+    icon: FaFacebookF,
+    name: "Facebook",
+    link: "https://www.facebook.com/drcfsorg",
+  },
+  {
+    id: 4,
     icon: FaInstagram,
     name: "Instagram",
-    link:"https://www.linkedin.com/company/data-research-council-for-students/mycompany/"
+    link: "https://www.instagram.com/drcfsorg",
   },
 ];
 
 const FooterContacts = () => {
-  const onClickHandlerEmail=()=>{
+  const onClickHandlerEmail = () => {
     return window.open(`mailto:${email}`);
-  }
-
-
-
+  };
 
   return (
     <div className={classes.container}>
@@ -52,13 +49,19 @@ const FooterContacts = () => {
         <p onClick={onClickHandlerEmail}> {email}</p>
       </div>
       <div className={classes.contactBox}>
-        {
-            contactIcons.map((icon)=>{
-                return <a className={classes.iconBox} key={icon.id} href={icon.link} target="_blank" rel="noreferrer">
-                    {<icon.icon/>}
-                </a>
-            })
-        }
+        {contactIcons.map((icon) => {
+          return (
+            <a
+              className={classes.iconBox}
+              key={icon.id}
+              href={icon.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {<icon.icon />}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Description = () => {
         </a>
         <a
           className={classes["discord-button"]}
-          href="https://discord.gg/TEHNbNvRnh"
+          href="https://discord.com/invite/vEyZsJVS"
           target="_blank"
           rel="noreferrer"
         >

@@ -21,7 +21,7 @@ const Description = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <span>Join linkedin</span>
+          <span>Join Linkedin</span>
           <FaLinkedinIn className={classes.icon} />
         </a>
         <a

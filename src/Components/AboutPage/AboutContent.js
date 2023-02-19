@@ -10,7 +10,7 @@ const AboutContent = () => {
     <div className={classes.container}>
       <div className={classes.headerBox}>
         <h1>
-          Our Core<span> Team</span>
+          The <span>team </span> that makes it all possible
         </h1>
       </div>
       <div className={classes.insideBox}>

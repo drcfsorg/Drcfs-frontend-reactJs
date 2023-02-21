@@ -3,8 +3,8 @@ import React, { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router";
 
 //react redux
-import fetchCommunityInfo from "./Store/community-action";
-import eventsCommunityInfo from "./Store/events";
+import { fetchEvents } from "./features/event/eventSlice";
+import { fetchMembers } from "./features/community/communitySlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
@@ -34,8 +34,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCommunityInfo());
-    dispatch(eventsCommunityInfo());
+    dispatch(fetchEvents());
+    dispatch(fetchMembers());
   }, [dispatch]);
 
   return (

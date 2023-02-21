@@ -11,7 +11,7 @@ const CommunityDescription = () => {
         <div className={classes.headerBox}>
           <h1 className={classes.h1}>
             Join Nepal's Largest{" "}
-            <span className={classes.span}>Data Science Community</span>
+            <span className={classes.span}>Data Science</span> Community
           </h1>
         </div>
         <div className={classes.captionBox}>
@@ -24,7 +24,7 @@ const CommunityDescription = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <span>Join linkedin</span>
+            <span>Join Linkedin</span>
             <FaLinkedinIn className={classes.icon} />
           </a>
           <a

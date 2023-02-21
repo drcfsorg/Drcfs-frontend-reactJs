@@ -2,15 +2,15 @@ import classes from "./events.module.css";
 import { MdArrowForwardIos } from "react-icons/md";
 import { BsPersonFill } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 const caption =
   "Join our DRCFS community to upskill your data science and machine learning skills from industry experts.";
 
 function Events() {
-  const eventsObject = useSelector((state) => state.events);
-  const events = eventsObject.events;
+  const { events } = useSelector((state) => state.event);
+
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -36,6 +36,7 @@ function Events() {
           </a>
         </div>
         <div className={classes["events-box"]}>
+          {/* Using slice method to display only 3 items on the index page */}
           {events.slice(0, 3).map((event) => {
             return (
               <div key={event.title} className={classes["event-box"]}>

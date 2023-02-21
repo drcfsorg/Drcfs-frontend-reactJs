@@ -7,31 +7,30 @@ import { NavLink } from "react-router-dom";
 
 const headers = [
   {
-    id:1,
-    headerName:"Community",
-    path:"/community"
+    id: 1,
+    headerName: "Community",
+    path: "/community",
   },
   {
-    id:2,
-    headerName:"Events",
-    path:"/events"
+    id: 2,
+    headerName: "Events",
+    path: "/events",
   },
   {
-    id:3,
-    headerName:"About",
-    path:"/about"
+    id: 3,
+    headerName: "About",
+    path: "/about",
   },
   {
-    id:4,
-    headerName:"Datasets",
-    path:"/datasets"
-  }
+    id: 4,
+    headerName: "Datasets",
+    path: "/datasets",
+  },
 ];
 
 const Header = () => {
   const [clicked, setIsClicked] = useState(false);
-  let width=window.innerWidth;
-  
+  let width = window.innerWidth;
 
   const onClickHandler = () => {
     setIsClicked(!clicked);
@@ -43,49 +42,49 @@ const Header = () => {
 
   //To Show the Nav List
 
-  const navClass=clicked?classes.nav1:classes.navList;
+  const navClass = clicked ? classes.nav1 : classes.navList;
 
   //To scroll to the top of the page
-  const onNavClick=()=>{
-    window.scrollTo(0,0);
-    if(width<=481){
-        setIsClicked(false);
+  const onNavClick = () => {
+    window.scrollTo(0, 0);
+    if (width <= 481) {
+      setIsClicked(false);
     }
-
-    
-  }
-
+  };
 
   return (
-      <nav className={classes.navBar}>
-
-        <div className={classes.mobileBox}>
-        <NavLink to="/" className={classes.imageIcon}><img className={classes.img} src={drcfsIcon} alt="DRCFS Logo" /></NavLink>
-          <div className={lineClass} onClick={onClickHandler}>
-            <div className={classes.line}></div>
-          </div>
+    <nav className={classes.navBar}>
+      <div className={classes.mobileBox}>
+        <NavLink to="/" className={classes.imageIcon}>
+          <img className={classes.img} src={drcfsIcon} alt="DRCFS Logo" />
+        </NavLink>
+        <div className={lineClass} onClick={onClickHandler}>
+          <div className={classes.line}></div>
         </div>
+      </div>
 
-
-        <div className={navClass}>
+      <div className={navClass}>
         <ul className={classes.ulList}>
           {headers.map((header) => {
             return (
               <div className={classes.liBox} key={header.id}>
-                <NavLink onClick={onNavClick} to={header.path} className={classes.navLink}>
-                
-                <li>{header.headerName}</li>
-                <div className={classes.underLine}></div>
+                <NavLink
+                  onClick={onNavClick}
+                  to={header.path}
+                  className={classes.navLink}
+                >
+                  <li>{header.headerName}</li>
+                  <div className={classes.underLine}></div>
                 </NavLink>
-                
               </div>
             );
           })}
-          <button className={classes.button} disabled>Sign In</button>
+          <button className={classes.button} disabled>
+            Sign In
+          </button>
         </ul>
-        </div>
-      </nav>
-  
+      </div>
+    </nav>
   );
 };
 

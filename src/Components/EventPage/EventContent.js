@@ -4,8 +4,8 @@ import { IoCalendarSharp } from "react-icons/io5";
 import { useSelector } from "react-redux";
 
 const EventContent = () => {
-  const eventsObject = useSelector((state) => state.events);
-  const events = eventsObject.events;
+  const { events } = useSelector((state) => state.event);
+
   return (
     <div className={classes.container}>
       <div className={classes.headerBox}>

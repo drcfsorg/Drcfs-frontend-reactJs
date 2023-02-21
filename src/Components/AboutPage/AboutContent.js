@@ -1,10 +1,9 @@
 import classes from "./AboutContent.module.css";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { useSelector } from "react-redux/es/exports";
+import { useSelector } from "react-redux";
 
 const AboutContent = () => {
-  const communityData = useSelector((state) => state.community);
-  const communityArray = communityData.communityMembers;
+  const community = useSelector((state) => state.community);
 
   return (
     <div className={classes.container}>
@@ -14,10 +13,10 @@ const AboutContent = () => {
         </h1>
       </div>
       <div className={classes.insideBox}>
-        {communityArray.length === 0 ? (
+        {community.loading ? (
           <div className={classes.spinner}></div>
         ) : (
-          communityArray.map((data) => {
+          community.communityMembers.map((data) => {
             return (
               <div className={classes["member-Box"]} key={data.name}>
                 <div className={classes.imgBox}>

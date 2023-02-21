@@ -2,27 +2,14 @@ import classes from "./events.module.css";
 import { MdArrowForwardIos } from "react-icons/md";
 import { BsPersonFill } from "react-icons/bs";
 import { IoCalendarSharp } from "react-icons/io5";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 
 const caption =
   "Join our DRCFS community to upskill your data science and machine learning skills from industry experts.";
 
-// Function to reverse Array
-const reverseArr = (arr) => {
-  const newArr = [];
-  for (let i = arr.length - 1; i >= 0; i--) {
-    newArr.push(arr[i]);
-  }
-  return newArr;
-};
-
 function Events() {
-  const eventsObject = useSelector((state) => state.events);
-  const events = eventsObject.events;
-
-  // Reversing events array to get the latest first
-  const reversedEvents = reverseArr(events);
+  const { events } = useSelector((state) => state.event);
 
   const navigate = useNavigate();
 
@@ -50,7 +37,7 @@ function Events() {
         </div>
         <div className={classes["events-box"]}>
           {/* Using slice method to display only 3 items on the index page */}
-          {reversedEvents.slice(0, 3).map((event) => {
+          {events.slice(0, 3).map((event) => {
             return (
               <div key={event.title} className={classes["event-box"]}>
                 <div className={classes.imgBox}>

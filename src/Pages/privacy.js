@@ -1,10 +1,5 @@
-import React from 'react'
-import privacyComponent from '../Components/Privacy/privacy';
+import PrivacyComponent from "../Components/Privacy/privacy";
 
-const privacy = () => {
-  return (
-        <privacyComponent/>
-  )
+export default function Privacy() {
+  return <PrivacyComponent />;
 }
-
-export default privacy;

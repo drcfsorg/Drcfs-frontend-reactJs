@@ -38,8 +38,14 @@
   line-height: 1.5;
 }
 
-.type-container:last-child {
-  margin-bottom: 0;
+.last {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.last > span:hover {
+  color: orangered;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {

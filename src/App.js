@@ -22,6 +22,8 @@ import Footer from "./Components/Footer/footer";
 // import About from "./Pages/about";
 // import DataSet from "./Pages/datasets";
 
+import Privacy from "./Pages/privacy";
+import Terms from "./Pages/terms";
 const HomePage = React.lazy(() => import("./Pages/home"));
 const Community = React.lazy(() => import("./Pages/community"));
 const Event = React.lazy(() => import("./Pages/event"));
@@ -54,6 +56,8 @@ function App() {
           <Route path="/events" element={<Event />} />
           <Route path="/about" element={<About />} />
           <Route path="/datasets" element={<DataSet />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

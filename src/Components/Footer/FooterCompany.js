@@ -10,12 +10,12 @@ const navList = [
   {
     id: 2,
     name: "Privacy Policy",
-    path: "/about",
+    path: "/privacy",
   },
   {
     id: 3,
     name: "Terms & Conditions",
-    path: "/about",
+    path: "/terms",
   },
 ];
 

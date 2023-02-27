@@ -208,8 +208,13 @@
   letter-spacing: 0.2mm;
 }
 
-.registerButton:disabled {
-  cursor: no-drop;
+.registerButton > a {
+  text-decoration: none;
+  color: royalblue;
+}
+
+.registerButton > a:visited {
+  color: royalblue;
 }
 
 /* .shareIconBox {

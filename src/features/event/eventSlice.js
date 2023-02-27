@@ -34,6 +34,7 @@ const eventSlice = createSlice({
           location: fetchedList[i]["event location"],
           speaker: fetchedList[i]["event speaker"],
           eventImage: fetchedList[i]["event_pic"],
+          regUrl: fetchedList[i]["registration_url"],
         });
       }
       state.events = eventsList;

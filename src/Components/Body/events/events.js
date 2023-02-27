@@ -61,8 +61,8 @@ function Events() {
                         <IoCalendarSharp />
                         <p>{event.date}</p>
                       </div>
-                      <button disabled className={classes.registerButton}>
-                        Register
+                      <button className={classes.registerButton}>
+                        <a href={event.regUrl}>Register</a>
                       </button>
                     </div>
                   </div>

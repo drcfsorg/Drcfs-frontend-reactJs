@@ -1,7 +1,7 @@
 .verify {
   background-color: #141414;
   height: 100vh;
-  padding-top: 10vh;
+  padding-top: 6vh;
   padding-left: 10vw;
   display: flex;
   flex-direction: column;
@@ -41,15 +41,33 @@
   border-radius: 8px;
 }
 
-.button {
-  width: 100px;
-  border-radius: 16px;
-  cursor: pointer;
-  background-color: transparent;
-  color: royalblue;
-  border: 1px solid royalblue;
+.certificate {
+  display: flex;
+  gap: 12px;
 }
 
-.button:hover {
-  background: #3a3d47;
+.certificateImage {
+  width: 600px;
+  object-fit: contain;
+}
+
+.button {
+  height: fit-content;
+  padding: 10px 20px;
+  background-color: #31343c;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background-color: #324fe1;
+  color: white;
+}
+
+.errorMessage {
+  color: crimson;
 }

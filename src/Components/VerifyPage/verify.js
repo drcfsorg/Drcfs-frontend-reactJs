@@ -29,7 +29,7 @@ const Verify = () => {
         )
       );
       const imageSrc = `data:image/png;base64,${base64}`;
-      if (imageSrc.length === 110) {
+      if (imageSrc.length < 1000) {
         setError("Sorry your certificate was not found on our server :(");
         setImageSrc(null);
         setIsLoading(false);

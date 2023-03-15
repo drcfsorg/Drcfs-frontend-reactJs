@@ -21,10 +21,15 @@ const headers = [
     headerName: "About",
     path: "/about",
   },
+  // {
+  //   id: 4,
+  //   headerName: "Datasets",
+  //   path: "/datasets",
+  // },
   {
     id: 4,
-    headerName: "Datasets",
-    path: "/datasets",
+    headerName: "Verify",
+    path: "/verify",
   },
 ];
 

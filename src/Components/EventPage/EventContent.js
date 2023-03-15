@@ -39,7 +39,9 @@ const EventContent = () => {
                       <p>{event.date}</p>
                     </div>
                     <button className={classes.registerButton}>
-                      <a href={event.regUrl}>Register</a>
+                      <a href={event.regUrl} target="_blank" rel="noreferrer">
+                        Register
+                      </a>
                     </button>
                   </div>
                 </div>

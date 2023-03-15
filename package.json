@@ -1,5 +1,6 @@
 {
   "name": "drcfsfrontend",
+  "proxy": "https://verify.drcfs.org",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://drcfs.org",

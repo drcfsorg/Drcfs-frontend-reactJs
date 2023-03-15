@@ -12,7 +12,7 @@ const Verify = () => {
     event.preventDefault();
     if (token === "") return;
     else {
-      const url = `/verify/${token}`;
+      const url = `https://verify.drcfs.org/verify/${token}`;
       setIsLoading(true);
       fetchData(url);
       setToken("");
@@ -39,7 +39,8 @@ const Verify = () => {
       setError(null);
       setIsLoading(false);
     } catch (error) {
-      console.log(error.message);
+      setError(error.message);
+      setIsLoading(false);
     }
   };
 

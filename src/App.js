@@ -29,6 +29,7 @@ const Community = React.lazy(() => import("./Pages/community"));
 const Event = React.lazy(() => import("./Pages/event"));
 const About = React.lazy(() => import("./Pages/about"));
 const DataSet = React.lazy(() => import("./Pages/datasets"));
+const Verify = React.lazy(() => import("./Pages/verify"));
 
 //
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/events" element={<Event />} />
           <Route path="/about" element={<About />} />
           <Route path="/datasets" element={<DataSet />} />
+          <Route path="/verify" element={<Verify />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" />} />

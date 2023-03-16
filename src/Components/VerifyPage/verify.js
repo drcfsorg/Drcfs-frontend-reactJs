@@ -21,6 +21,22 @@ const Verify = () => {
 
   const fetchData = async (url) => {
     try {
+      const response = await axios.get(url);
+      const data = response.data;
+      if (typeof data === "string") {
+        fetchImage(url);
+      } else {
+        setError("Sorry your certificate was not found on our server :(");
+        setImageSrc(null);
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const fetchImage = async (url) => {
+    try {
       const response = await axios.get(url, { responseType: "arraybuffer" });
       const base64 = btoa(
         new Uint8Array(response.data).reduce(
@@ -29,12 +45,6 @@ const Verify = () => {
         )
       );
       const imageSrc = `data:image/png;base64,${base64}`;
-      if (imageSrc.length < 1000) {
-        setError("Sorry your certificate was not found on our server :(");
-        setImageSrc(null);
-        setIsLoading(false);
-        return;
-      }
       setImageSrc(imageSrc);
       setError(null);
       setIsLoading(false);
@@ -46,7 +56,7 @@ const Verify = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.download = "my-image.png";
+    link.download = "certificate.png";
     link.href = imageSrc;
     link.click();
   };

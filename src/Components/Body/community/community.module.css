@@ -65,6 +65,37 @@
   color: var(---font-color);
   font-weight: bold;
 }
+.nameBox p{
+  margin-top: 10px;
+}
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+
+
+}
+
+.arrow {
+  color: white; 
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.arrow:first-child {
+  margin-right: 10px;
+}
+
+.arrow:last-child {
+  margin-left: 10px; 
+}
+
 
 @media (max-width: 481px) {
   .box {

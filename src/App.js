@@ -2,12 +2,6 @@ import "./App.css";
 import React, { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router";
 
-//react redux
-import { fetchEvents } from "./features/event/eventSlice";
-import { fetchMembers } from "./features/community/communitySlice";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-
 //Header and Footer Import
 import Header from "./Components/Header/header";
 import Footer from "./Components/Footer/footer";
@@ -34,13 +28,6 @@ const Verify = React.lazy(() => import("./Pages/verify"));
 //
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchEvents());
-    dispatch(fetchMembers());
-  }, [dispatch]);
-
   return (
     <div className="App">
       <Header />

@@ -1,27 +1,14 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   events: [],
-  loading: false,
-  error: "",
 };
-
-export const fetchEvents = createAsyncThunk("event/fetchEvents", async () => {
-  const response = await axios.get(
-    "https://webapi.drcfs.org/api/getinfo/events/"
-  );
-  return response.data;
-});
 
 const eventSlice = createSlice({
   name: "event",
   initialState,
-  extraReducers: (builder) => {
-    builder.addCase(fetchEvents.pending, (state) => {
-      state.loading = true;
-    });
-    builder.addCase(fetchEvents.fulfilled, (state, action) => {
+  reducers: {
+    addEvents: (state, action) => {
       const eventsList = [];
 
       const fetchedList = action.payload;
@@ -38,15 +25,8 @@ const eventSlice = createSlice({
         });
       }
       state.events = eventsList;
-      state.loading = false;
-      state.error = "";
-    });
-    builder.addCase(fetchEvents.rejected, (state, action) => {
-      state.events = [];
-      state.loading = false;
-      state.error = action.error.message;
-    });
+    },
   },
 });
-
+export const { addEvents } = eventSlice.actions;
 export default eventSlice.reducer;

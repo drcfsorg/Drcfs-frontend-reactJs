@@ -1,9 +1,20 @@
 import classes from "./AboutContent.module.css";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useCommunityMembers } from "../../hooks/useCommunityMembers";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addMembers } from "../../features/community/communitySlice";
 
 const AboutContent = () => {
+  const { communityInfo, isLoading, isError } = useCommunityMembers();
   const community = useSelector((state) => state.community);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (communityInfo) {
+      dispatch(addMembers(communityInfo));
+    }
+  }, [communityInfo, dispatch]);
 
   return (
     <div className={classes.container}>
@@ -13,7 +24,7 @@ const AboutContent = () => {
         </h1>
       </div>
       <div className={classes.insideBox}>
-        {community.loading ? (
+        {isLoading ? (
           <div className={classes.spinner}></div>
         ) : (
           community.communityMembers.map((data) => {

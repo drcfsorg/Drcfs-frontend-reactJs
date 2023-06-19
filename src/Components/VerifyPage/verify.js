@@ -82,10 +82,11 @@ const Verify = () => {
         <div className={styles.certificate}>
           <img
             src={imageSrc}
+            onClick={handleDownload}
             alt="certificate"
             className={styles.certificateImage}
           />
-          <button onClick={handleDownload} className={styles.button}>
+          <button onClick={handleDownload} className={styles.download}>
             Download
           </button>
         </div>

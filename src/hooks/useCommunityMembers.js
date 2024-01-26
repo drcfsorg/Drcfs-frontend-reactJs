@@ -3,7 +3,7 @@ import axios from "axios";
 
 const fetchCommunityMembers = async () => {
   const res = await axios.get(
-    "https://webapi.drcfs.org/api/getinfo/communitymembers/"
+    "https://webapiv2.drcfs.org/api/getinfo/communitymembers/"
   );
   return res.data;
 };

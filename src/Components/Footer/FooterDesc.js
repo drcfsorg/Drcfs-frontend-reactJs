@@ -8,7 +8,7 @@ const FooterDescription = () => {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    fetch("https://webapi.drcfs.org/api/getinfo/aboutus/")
+    fetch("https://webapiv2.drcfs.org/api/getinfo/aboutus/")
       .then((res) => res.json())
       .then((data) => setDescription(data.aboutus));
   }, []);

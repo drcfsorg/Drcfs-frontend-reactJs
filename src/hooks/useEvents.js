@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 
 const fetchEvents = async () => {
-  const res = await axios.get("https://webapi.drcfs.org/api/getinfo/events/");
+  const res = await axios.get("https://webapiv2.drcfs.org/api/getinfo/events/");
   return res.data;
 };
 
